@@ -1,0 +1,21 @@
+.nav{
+    grid-area:nav;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 2px;
+}
+
+
+    button {
+        font-family: fantasy;
+        border-radius: 15px;
+        font-size: 14px;
+        padding: 10px 24px;
+        background: white;
+    }
+
+

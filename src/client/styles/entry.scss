@@ -1,0 +1,23 @@
+.entry{
+    grid-area:en;
+    background: rgba(206, 200, 200, 0.651);
+    margin-top: 5px;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 15px;
+}
+
+input{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    background-color:rgba(206, 200, 200, 0.651);
+}
+
+#btn{
+    font-family: fantasy;
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 10px 18px
+}

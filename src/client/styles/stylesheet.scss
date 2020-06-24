@@ -1,0 +1,54 @@
+
+.container{
+    /* rules for small screen */
+    display:grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 50px 200px 300px 300px 30px;
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd"
+    "nav nav nav nav nav nav nav nav"
+    "sd sd sd sd sd sd sd sd"
+    "main main main main main main main main"
+    "en en en en en en en en"
+    "ft ft ft ft ft ft ft ft";
+    border: 2px solid yellow;
+    margin:100px;
+    margin-top: auto;
+}
+
+/* Medium Screens */
+@media (min-width: 600px) {
+    .container{
+    display:grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 100px 50px 400px 300px 30px;
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd"
+    "nav nav nav nav nav nav nav nav"
+    "sd sd main main main main main main"
+    "en en en en en en en en"
+    "ft ft ft ft ft ft ft ft";
+    border: 2px solid yellow;
+    margin:100px;
+    margin-top: auto;
+    }
+}
+
+
+  /* Large Screens */
+  @media (min-width: 1200px) {
+    .container{
+    display:grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 100px 50px 400px 300px 30px;
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd"
+    "nav nav nav nav nav nav nav nav"
+    "sd sd sd main main main main main"
+    "en en en en en en en en"
+    "ft ft ft ft ft ft ft ft";
+    border: 2px solid yellow;
+    margin:100px;
+    margin-top: auto;
+}
+}

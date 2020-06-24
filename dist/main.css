@@ -1,0 +1,12 @@
+.sidebar{grid-area:sd;background:pink}.content{grid-area:main;background:pink}
+
+.entry{grid-area:en;background:rgba(206,200,200,0.651);margin-top:5px;text-align:center;font-family:fantasy;font-size:15px}input{border-top-style:hidden;border-right-style:hidden;border-left-style:hidden;border-bottom-style:hidden;background-color:rgba(206,200,200,0.651)}#btn{font-family:fantasy;border-radius:12px;font-size:15px;padding:10px 18px}
+
+.footer{grid-area:ft;background:white}
+
+.header{grid-area:hd;font-family:fantasy;font-size:30px;margin-top:30px}
+
+.nav{grid-area:nav}.nav{display:flex;justify-content:space-between;align-items:stretch;padding:2px}button{font-family:fantasy;border-radius:15px;font-size:14px;padding:10px 24px;background:white}
+
+.container{display:grid;grid-template-columns:100px 100px 100px;grid-template-rows:100px 50px 200px 300px 300px 30px;grid-template-areas:"hd hd hd hd hd hd hd hd" "nav nav nav nav nav nav nav nav" "sd sd sd sd sd sd sd sd" "main main main main main main main main" "en en en en en en en en" "ft ft ft ft ft ft ft ft";border:2px solid yellow;margin:100px;margin-top:auto}@media (min-width: 600px){.container{display:grid;grid-template-columns:200px 200px 200px;grid-template-rows:100px 50px 400px 300px 30px;grid-template-areas:"hd hd hd hd hd hd hd hd" "nav nav nav nav nav nav nav nav" "sd sd main main main main main main" "en en en en en en en en" "ft ft ft ft ft ft ft ft";border:2px solid yellow;margin:100px;margin-top:auto}}@media (min-width: 1200px){.container{display:grid;grid-template-columns:300px 300px 300px;grid-template-rows:100px 50px 400px 300px 30px;grid-template-areas:"hd hd hd hd hd hd hd hd" "nav nav nav nav nav nav nav nav" "sd sd sd main main main main main" "en en en en en en en en" "ft ft ft ft ft ft ft ft";border:2px solid yellow;margin:100px;margin-top:auto}}
+
