@@ -3,6 +3,7 @@
     background: rgba(206, 200, 200, 0.651);
     margin-top: 5px;
     text-align: center;
+    padding-top: 40px;;
     font-family: fantasy;
     font-size: 15px;
 }
@@ -15,9 +16,13 @@ input{
     background-color:rgba(206, 200, 200, 0.651);
 }
 
-#btn{
+#generate{
     font-family: fantasy;
     border-radius: 12px;
     font-size: 15px;
     padding: 10px 18px
+}
+
+#generate:hover {
+    background-color: rgb(156, 154, 154);
 }

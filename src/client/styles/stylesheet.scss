@@ -1,3 +1,7 @@
+.footer{
+    background-image: url('../media/background.jpg');
+    background-size: cover;
+}
 
 .container{
     /* rules for small screen */
@@ -15,6 +19,8 @@
     margin:100px;
     margin-top: auto;
 }
+
+
 
 /* Medium Screens */
 @media (min-width: 600px) {
@@ -35,6 +41,8 @@
 }
 
 
+
+
   /* Large Screens */
   @media (min-width: 1200px) {
     .container{
@@ -52,3 +60,4 @@
     margin-top: auto;
 }
 }
+
