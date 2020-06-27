@@ -40,7 +40,7 @@ async function postData ( url = '', data = {}) {
 
 
 // Update UI
-async function updateUI() {
+async function updateUI(data) {
     console.log("data", data)
     document.getElementById('des_d').innerHTML = data.destination
     document.getElementById('date').innerHTML = data.date
