@@ -10,14 +10,14 @@ async function performAction (e) {
     const geoLocation = await getGeoLocation (des)
     const getWeatherForcast = await getWeather(geoLocation.latitude, geoLocation.longitude)
     const imageURL = await getImage(des)
-    const data = await postData('/add', 
+    const data = await postData('http://localhost:8080/add', 
     {'destination': des,
     'date': date, 
     'temp': getWeatherForcast.temp,
     'description': getWeatherForcast.description,
     'url': imageURL
     })
-    const update = await updateUI()
+    const update = await updateUI(data)
 }
 
 // Function to POST data to local server
@@ -41,10 +41,11 @@ async function postData ( url = '', data = {}) {
 
 // Update UI
 async function updateUI() {
+    console.log("data", data)
     document.getElementById('des_d').innerHTML = data.destination
     document.getElementById('date').innerHTML = data.date
     document.getElementById('temp').innerHTML = data.temp
-    document.getElementsByTagName('img').innerHTML = data.url
+    document.getElementsByTagName('img').src = data.url
 }
 
 
