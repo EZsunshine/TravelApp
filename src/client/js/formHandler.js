@@ -20,6 +20,7 @@ async function performAction (e) {
     const update = await updateUI(data)
 }
 
+
 // Function to POST data to local server
 async function postData ( url = '', data = {}) {
     const req = await fetch(url, {
@@ -42,11 +43,19 @@ async function postData ( url = '', data = {}) {
 // Update UI
 async function updateUI(data) {
     console.log("data", data)
+
+ try{
     document.getElementById('des_d').innerHTML = data.destination
     document.getElementById('date').innerHTML = data.date
     document.getElementById('temp').innerHTML = data.temp
-    document.getElementsByTagName('img').src = data.url
+    document.getElementById('description').innerHTML = data.description
+    document.getElementsById('fromPixabay').src = data.url
 }
+catch (error) {
+    console.log("error", error)
+}
+ }
+    
 
 
 export {performAction, postData, updateUI }

@@ -1,8 +1,3 @@
-.footer{
-    background-image: url('../media/background.jpg');
-    background-size: cover;
-}
-
 .container{
     /* rules for small screen */
     display:grid;
@@ -15,7 +10,6 @@
     "main main main main main main main main"
     "en en en en en en en en"
     "ft ft ft ft ft ft ft ft";
-    border: 2px solid yellow;
     margin:100px;
     margin-top: auto;
 }
@@ -34,7 +28,6 @@
     "sd sd main main main main main main"
     "en en en en en en en en"
     "ft ft ft ft ft ft ft ft";
-    border: 2px solid yellow;
     margin:100px;
     margin-top: auto;
     }
@@ -55,7 +48,6 @@
     "sd sd sd main main main main main"
     "en en en en en en en en"
     "ft ft ft ft ft ft ft ft";
-    border: 2px solid yellow;
     margin:100px;
     margin-top: auto;
 }
