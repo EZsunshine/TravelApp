@@ -1,5 +1,21 @@
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+  /* For mobile phones: */
 .footer{
     grid-area:ft;
     background: white;
     font-family: cursive;
+    width: 400px;
+    padding-left: 10px;
   }
+}
+
+
+  @media (min-width: 769px) {
+  .footer{
+    grid-area:ft;
+    background: white;
+    font-family: cursive;
+    width: 600px;
+    padding-left: 10px;
+  }
+}

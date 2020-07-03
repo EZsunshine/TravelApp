@@ -1,4 +1,4 @@
-import {getGeoLocation, getWeather, getImage} from './requests'
+import {getGeoLocation, getWeather, getImage, countDown} from './requests'
 
 // Create an event listener with a callback function to execute when clicked
 document.getElementById('generate').addEventListener('click', performAction)
@@ -7,7 +7,8 @@ async function performAction (e) {
     const des = document.getElementById('des').value
     const date = document.getElementById('dep_date').value
 
-    const geoLocation = await getGeoLocation (des)
+    const geoLocation = await getGeoLocation(des)
+    const duration = await countDown(date)
     const getWeatherForcast = await getWeather(geoLocation.latitude, geoLocation.longitude)
     const imageURL = await getImage(des)
     const data = await postData('http://localhost:8080/add', 
@@ -15,10 +16,21 @@ async function performAction (e) {
     'date': date, 
     'temp': getWeatherForcast.temp,
     'description': getWeatherForcast.description,
-    'url': imageURL
+    'url': imageURL,
+    'duration': duration
     })
     const update = await updateUI(data)
+
+    document.querySelector('.bg-modal').style.display = 'flex';
+    document.querySelector('.close').addEventListener('click', () => {
+        document.querySelector('.bg-modal').style.display = 'none';
+    }
+    )
 }
+
+//
+
+
 
 
 // Function to POST data to local server
@@ -42,14 +54,15 @@ async function postData ( url = '', data = {}) {
 
 // Update UI
 async function updateUI(data) {
-    console.log("data", data)
+     console.log("data", data)
 
  try{
     document.getElementById('des_d').innerHTML = data.destination
-    document.getElementById('date').innerHTML = data.date
+    document.getElementById('date_d').innerHTML = data.dep_date
+    document.getElementById('duration').innerHTML = data.duration
     document.getElementById('temp').innerHTML = data.temp
     document.getElementById('description').innerHTML = data.description
-    document.getElementsById('fromPixabay').src = data.url
+    document.getElementById('fromPixabay').src = data.url
 }
 catch (error) {
     console.log("error", error)
@@ -58,4 +71,4 @@ catch (error) {
     
 
 
-export {performAction, postData, updateUI }
+export {performAction, postData, updateUI}

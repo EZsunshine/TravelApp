@@ -1,11 +1,25 @@
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+  /* For mobile phones: */
+ 
 .header{
-    grid-area:hd;
     font-family: fantasy;
     font-size: 30px;
     text-align: start;
     background-color: #676b70;
-    border-radius: 10px;
-    border-style: outset;
     padding-top:10px;
     padding-left: 10px;
+    width: 400px;
   }
+}
+
+@media (min-width: 769px) {
+  .header{
+    font-family: fantasy;
+    font-size: 30px;
+    text-align: start;
+    background-color: #676b70;
+    padding-top:10px;
+    padding-left: 10px;
+    width: 600px;
+  }
+}

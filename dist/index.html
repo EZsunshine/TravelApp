@@ -1,6 +1,8 @@
 <!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Travel Planner</title></head><style>.backimg {
     background-image: url('src/client/media/background.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-   
-}</style><body class="backimg"><div class="container"><div class="header box">Travel Planner</div><div class="nav box"><h4 id="one">My Trips:</h4><button id="btn">+ add trip</button></div><div class="sidebar box"><img src="src/client/media/planet-earth.png" alt="destination image" id="fromPixabay"></div><div class="content box"><p>My trip to: <span id="des_d"></span></p><p>Departing: <span id="date"></span></p><p>Duration: <span id="duration"></span></p><p>Expected weather to be: <span id="temp"></span> &#176; C,<span id="description"></span></p></div><div class="entry box"><label for="destination">My trip to:</label> <input id="des" placeholder="Enter Location"><br><br><label for="dep">Departing:</label> <input type="date" id="dep_date" placeholder="MM/DD/YY"><br><br><button id="generate" type="submit">Submit</button></div><div class="footer box">&copy 2020</div></div><script src="main.js"></script></body></html>
+    background-size: cover;
+    background-position: center;
+    height: 88vh;
+    width: 100%;
+  }</style><body class="backimg"><div class="container"><div class="header">Travel Planner</div><div class="entry"><label for="destination">My trip to:</label> <input id="des" placeholder="Enter Location" required/><br><br><label for="dep">Departing:</label> <input type="date" id="dep_date" placeholder="MM/DD/YY" required/><br><br><button id="generate" type="submit">Submit</button></div><div class="footer">Travel Planner &copy 2020</div></div><div class="bg-modal"><div class="modal-content"><div class="close">+</div><div class="sidebar box"><img src="" alt="destination image" id="fromPixabay"></div><div class="content box"><p>My trip to: <span id="des_d"></span></p><p>Departing: <span id="date_d"></span></p><p>Duration: <span id="duration">days</span></p><p>Expected weather to be: <span id="temp"></span> &#176; C, <span id="description"></span></p></div><button id="btn">+ add trip</button><div></div><script src="main.js"></script></div></div></body></html>

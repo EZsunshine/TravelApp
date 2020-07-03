@@ -1,5 +1,5 @@
-import { getGeoLocation, getWeather } from './js/requests'
-import { performAction, postData, updateUI } from './js/formHandler'
+import { getGeoLocation, getWeather, countDown } from './js/requests'
+import { performAction, postData, updateUI} from './js/formHandler'
 
 
 
@@ -7,7 +7,6 @@ import './styles/body.scss'
 import './styles/entry.scss'
 import './styles/footer.scss'
 import './styles/header.scss'
-import './styles/nav.scss'
 import './styles/stylesheet.scss'
 
 export{
@@ -15,5 +14,6 @@ export{
     performAction, 
     getWeather,
     postData,
-    updateUI
+    updateUI,
+    countDown
 }

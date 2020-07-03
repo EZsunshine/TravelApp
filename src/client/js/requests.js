@@ -1,5 +1,3 @@
-
-
 const baseURL = `http://api.weatherbit.io/v2.0/forecast/daily?`
 const key = '&key=a4ab190fd16842df9929c2c348d316a6'
 
@@ -26,7 +24,14 @@ const getGeoLocation = async (des) => {
 }
 
 // countdown function to get how soon the trip is
+const countDown = async (date) => {
+    const timestampNow = (Date.now()) / 1000
+    const timestamp = (new Date(date).getTime()) / 1000
+    const duration = Math.ceil((timestamp - timestampNow) / 86400)
 
+    // console.log(duration)
+    return duration
+}
 
 
 // Function to get weather from Weatherbit
@@ -65,4 +70,4 @@ const getImage = async (city) => {
     }
 }
 
-export { getGeoLocation, getWeather, getImage }
+export { getGeoLocation, getWeather, getImage, countDown }
