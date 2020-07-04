@@ -52,6 +52,7 @@ const getWeather = async (latitude, longitude, duration) => {
         return weather
     } catch(error) {
         console.log('error', error)
+        alert("Weatherforcast is only available withnin 16 days!")
     }
 }
 
