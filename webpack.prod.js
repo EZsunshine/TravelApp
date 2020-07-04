@@ -6,8 +6,8 @@ module.exports = {
     entry: './src/client/index.js',
     mode: 'production',
     output:{
-        libraryTarget: 'var',
-        library: 'Client',
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
         },
     module: {
         rules: [

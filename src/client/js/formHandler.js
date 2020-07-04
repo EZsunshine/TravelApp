@@ -11,7 +11,7 @@ async function performAction (e) {
     const duration = await countDown(date)
     const getWeatherForcast = await getWeather(geoLocation.latitude, geoLocation.longitude, duration)
     const imageURL = await getImage(des)
-    const data = await postData('http://localhost:8080/add', 
+    const data = await postData('http://localhost:8081/add', 
     {'destination': des,
     'country': geoLocation.countryName,
     'date': date, 
@@ -61,7 +61,7 @@ async function updateUI(data) {
     document.getElementById('duration').innerHTML = data.duration
     document.getElementById('temp').innerHTML = data.temp
     document.getElementById('description').innerHTML = data.description
-    document.getElementById('icon').innerHTML = data.icon
+//    document.getElementById('icon').src = data.icon
     document.getElementById('fromPixabay').src = data.url
 }
 catch (error) {
