@@ -14,7 +14,7 @@ const getGeoLocation = async (des) => {
 
         location.latitude = geoData.geonames[0].lat
         location.longitude = geoData.geonames[0].lng
-        location.countryCode = geoData.geonames[0].countryCode
+        location.countryName = geoData.geonames[0].countryName
         
        // console.log(location)
         return location
@@ -29,25 +29,26 @@ const countDown = async (date) => {
     const timestamp = (new Date(date).getTime()) / 1000
     const duration = Math.ceil((timestamp - timestampNow) / 86400)
 
-    // console.log(duration)
+     //console.log(duration)
     return duration
 }
 
-
+console.log(duration)
 // Function to get weather from Weatherbit
-const getWeather = async (latitude, longitude) => {
-    const endpoint = baseURL + `lat=${latitude}&lon=${longitude}`+ key
+const getWeather = async (latitude, longitude, duration) => {
+    const endpoint = baseURL + `lat=${latitude}&lon=${longitude}`+ key 
     const response = await fetch(endpoint)
     try{
         const weather = {}
         const weatherData = await response.json()
-        // console.log(weatherData)
+         console.log(weatherData)
 
         weather.city = weatherData.city_name
-        weather.temp = weatherData.data[0].temp
-        weather.description = weatherData.data[0].weather.description
+        weather.temp = weatherData.data[duration].temp
+        weather.description = weatherData.data[duration].weather.description
+        weather.icon = weatherData.data[duration].weather.icon
         
-       // console.log(weather)
+        console.log(weather)
         return weather
     } catch(error) {
         console.log('error', error)
@@ -68,6 +69,7 @@ const getImage = async (city) => {
     } catch(error) {
         console.log('error', error)
     }
+
 }
 
 export { getGeoLocation, getWeather, getImage, countDown }

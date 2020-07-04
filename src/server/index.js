@@ -1,13 +1,9 @@
 var path = require('path')
 // Require Express to run server and routes
 const express = require("express")
-// Require nedb
-const Datastore = require("nedb")
 // Start up an instance of app
 const app = express()
 
-const projectData = new Datastore('database.db')
-projectData.loadDatabase()
 
 /* Dependecies */
 const bodyParser = require("body-parser")
@@ -35,7 +31,7 @@ app.listen(PORT, () => {
 
 
 // Stup emput JS object to run server and routes
-//const projectData = {}
+const projectData = {}
 
 // GET Route
 app.get('/all', sendData)
@@ -52,10 +48,12 @@ function addInfo(req, res) {
   console.log('I got a request!')
  
     projectData.destination = req.body.destination
+    projectData.country = req.body.country
     projectData.dep_date = req.body.date
     projectData.duration = req.body.duration
     projectData.temp = req.body.temp
     projectData.description = req.body.description
+    projectData.icon = req.body.icon
     projectData.url = req.body.url
 
     res.send(projectData)

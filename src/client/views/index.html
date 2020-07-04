@@ -33,18 +33,19 @@
 
         <!-- Modal Section -->
         <div class="bg-modal">
-          <div class="modal-content">
+          <div class="modal-content" display="to print">
           <div class="close">+</div>
           <div class="sidebar box" >
             <img src="" alt ="destination image" id='fromPixabay'>
           </div>
           <div class="content box">
-            <p>My trip to: <span id="des_d"></span></p>
+            <p>My trip to: <span id="des_d"></span>, <span id="country"></span></p>
             <p>Departing: <span id="date_d"></span></p>
             <p>Duration: <span id="duration">days</span> days</p>
-            <p>Expected weather to be: <span id="temp"></span> &#176; C, <span id="description"></span></p>
+            <p>Expected weather to be: <br />
+              <span id='icon'></span><span id="temp"></span> &#176; C, <span id="description"></span></p>
           </div>
-          <button id="btn">+ add trip</button>
+          <button onclick="window.print()" id="btn">Print</button>
           <div>
         </div>
           
