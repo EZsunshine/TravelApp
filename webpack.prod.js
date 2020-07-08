@@ -9,6 +9,8 @@ module.exports = {
     output:{
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        libraryTarget: 'var',
+        library: 'Client'
         },
     module: {
         rules: [
@@ -23,7 +25,7 @@ module.exports = {
               },
               {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: ['file-loader', 'url-loader']
+                use: ['file-loader']
               },
         ]
     },

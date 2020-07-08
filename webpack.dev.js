@@ -9,6 +9,8 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        libraryTarget: 'var',
+        library: 'Client'
     },
     mode: 'development',
     devtool: 'source-map',
@@ -26,7 +28,7 @@ module.exports = {
               },
               {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: ['file-loader', 'url-loader']
+                use: ['file-loader']
               },
         ]
     },

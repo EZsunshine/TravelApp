@@ -24,7 +24,7 @@ console.log(__dirname)
 
 
 // designates what port the app wil listen to for incoming requests
-const PORT = 8081;
+const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`CORS-enabled web server listening on port ${PORT}`);
 });
