@@ -23,8 +23,8 @@ async function performAction (e) {
     })
     const update = await updateUI(data)
 
-    document.querySelector('.bg-modal').style.display = 'flex';
-    document.querySelector('.close').addEventListener('click', () => {
+        document.querySelector('.bg-modal').style.display = 'flex';
+        document.querySelector('.close').addEventListener('click', () => {
         document.querySelector('.bg-modal').style.display = 'none';
     }
     )
@@ -53,7 +53,6 @@ async function postData ( url = '', data = {}) {
 // Update UI
 async function updateUI(data) {
      console.log("data", data)
-
  try{
     document.getElementById('des_d').innerHTML = data.destination
     document.getElementById('country').innerHTML = data.country
@@ -61,7 +60,7 @@ async function updateUI(data) {
     document.getElementById('duration').innerHTML = data.duration
     document.getElementById('temp').innerHTML = data.temp
     document.getElementById('description').innerHTML = data.description
-//    document.getElementById('icon').src = data.icon
+    document.getElementById('icon').innerHTML = `<img src="src/client/media/icons/${data.icon}.png">`
     document.getElementById('fromPixabay').src = data.url
 }
 catch (error) {
