@@ -33,7 +33,6 @@ const countDown = async (date) => {
     return duration
 }
 
-console.log(duration)
 // Function to get weather from Weatherbit
 const getWeather = async (latitude, longitude, duration) => {
     const endpoint = baseURL + `lat=${latitude}&lon=${longitude}`+ key 
@@ -41,14 +40,14 @@ const getWeather = async (latitude, longitude, duration) => {
     try{
         const weather = {}
         const weatherData = await response.json()
-         console.log(weatherData)
+         // console.log(weatherData)
 
         weather.city = weatherData.city_name
         weather.temp = weatherData.data[duration].temp
         weather.description = weatherData.data[duration].weather.description
         weather.icon = weatherData.data[duration].weather.icon
         
-        console.log(weather)
+        // console.log(weather)
         return weather
     } catch(error) {
         console.log('error', error)

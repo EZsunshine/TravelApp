@@ -1,7 +1,7 @@
 @media (min-width: 500px) and (max-width: 768px) {
   /* For mobile phones: */
   .modal-content .content {
-    padding-top: 20px;
+    padding-top: 10px;
     font-family: "Comic Sans MS", cursive, sans-serif;
   }
  
@@ -12,9 +12,8 @@
  #fromPixabay {
    max-width: 300px;
    max-height: 200px;
+   margin: auto;
  }
-
- 
 
  .bg-modal {
    width: 100%;

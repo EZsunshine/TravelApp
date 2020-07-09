@@ -53,17 +53,14 @@ async function postData ( url = '', data = {}) {
 // Update UI
 async function updateUI(data) {
      console.log("data", data)
- try{
+  try{
     document.getElementById('des_d').innerHTML = data.destination
     document.getElementById('country').innerHTML = data.country
     document.getElementById('date_d').innerHTML = data.dep_date
     document.getElementById('duration').innerHTML = data.duration
     document.getElementById('temp').innerHTML = data.temp
     document.getElementById('description').innerHTML = data.description
-   // document.getElementById('icon').innerHTML = `<img src="src/client/media/icons/${data.icon}.png">`
-    const weatherIcon = new Image()
-    weatherIcon.src = Client[data.icon]
-    document.getElementById('icon').appendChild(weatherIcon)
+    document.getElementById('icon').innerHTML = `<img src="src/client/media/icons/${data.icon}.png" height=50px width=50px>`
     document.getElementById('fromPixabay').src = data.url
 }
 catch (error) {
