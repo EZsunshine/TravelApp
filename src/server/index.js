@@ -45,7 +45,7 @@ function sendData(req, res) {
 app.post('/add', addInfo)
 // Callback function to commplete POST '/add'
 function addInfo(req, res) {
-  console.log('I got a request!')
+    console.log('I got a request!')
  
     projectData.destination = req.body.destination
     projectData.country = req.body.country
@@ -58,5 +58,6 @@ function addInfo(req, res) {
 
     res.send(projectData)
     console.log(projectData)
+  
 }
 
