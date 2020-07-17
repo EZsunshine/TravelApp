@@ -6,6 +6,15 @@
         align-items: center;
         margin-top: 80px;
     }
+
+    .backimg {
+      background-image: url('src/client/media/background.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 88vh;
+      width: 100%;
+    }
   }
 
 
