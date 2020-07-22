@@ -1,10 +1,10 @@
-@media only screen and (min-width: 500px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   /* For mobile phones: */
 .footer{
     grid-area:ft;
     background: white;
     font-family: cursive;
-    width: 400px;
+    width: 350px;
     padding-left: 10px;
   }
 }

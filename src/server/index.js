@@ -24,7 +24,7 @@ console.log(__dirname)
 
 
 // designates what port the app wil listen to for incoming requests
-const PORT = 8080;
+const PORT = 8082;
 app.listen(PORT, () => {
   console.log(`CORS-enabled web server listening on port ${PORT}`);
 });
@@ -37,7 +37,7 @@ const projectData = {}
 app.get('/all', sendData)
 // Callback function to complete GET '/all'
 function sendData(req, res) {
-    res.sendFile(path.resolve('src/client/views/index.html'))
+  res.sendFile(path.resolve('src/client/views/index.html'))
 }
 
 
@@ -45,6 +45,7 @@ function sendData(req, res) {
 app.post('/add', addInfo)
 // Callback function to commplete POST '/add'
 function addInfo(req, res) {
+  
     console.log('I got a request!')
  
     projectData.destination = req.body.destination
@@ -58,6 +59,6 @@ function addInfo(req, res) {
 
     res.send(projectData)
     console.log(projectData)
-  
 }
 
+module.exports = app;
