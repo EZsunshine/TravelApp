@@ -37,5 +37,5 @@ Please enhance the test cases if you add functionality
 * [Pixabay API](https://pixabay.com/api/docs/) - RESTful interface for searching and retrieving free images and videos
 
 ## Extend Options
-Incorporate icons into forecast.
-Allow user to Print their trip and/or export to PDF.
+* Incorporate icons into forecast.
+* Allow user to Print their trip and/or export to PDF.
